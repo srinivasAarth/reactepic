@@ -16,7 +16,7 @@ function App() {
   // 💰 try putting it in a few different places and observe how that
   // impacts the user experience.
   return (
-    <React.Suspense fallback = {<div>loading...</div>} >
+    
     <div
       style={{
         display: 'flex',
@@ -37,13 +37,13 @@ function App() {
         {' show globe'}
       </label>
       <div style={{width: 400, height: 400}}>
-       
+      <React.Suspense fallback = {<div>loading...</div>} >
         {showGlobe ?  <Globel />  : null}
-        
+        </React.Suspense>
       </div>
       
     </div>
-  </React.Suspense>
+  
   )
 }
 // 🦉 Note that if you're not on the isolated page, then you'll notice that this
